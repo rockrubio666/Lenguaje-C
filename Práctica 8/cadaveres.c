@@ -2,128 +2,89 @@
 
 #include<stdio.h>
 #include<string.h>
+
 struct becario{  //Se crea la estructura becario
-	char nombre[12]; //Variables que contiene becario
+	char nombre[12];
 	int edad;
 	float promedio;
 	char procedencia[12];
 	int generacion;
 	unsigned int proyecto:1; 
 };
+
 int main()
 {
-	struct becario bec; //Se crea el tipo de variable bec
-	strcpy(bec.nombre,"Gonzalo"); //Se agrega cada becario, con sus respectivos datos
-	printf("%s\n",bec.nombre);
-	bec.edad=25; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.6; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"Ciencias"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	struct becario bec[8]; //Se crea un arreglo de la estructura de longitud 8
+	strcpy(bec[0].nombre,"Gonzalo"); 
+	bec[0].edad=25; 
+	bec[0].promedio=9.6; 
+	strcpy(bec[0].procedencia,"Ciencias"); 
+	bec[0].generacion=11; 
+	bec[0].proyecto=1;
 	
-	strcpy(bec.nombre,"Fer"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=22; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.7; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"FI"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[1].nombre,"Fer"); 
+	bec[1].edad=22; 
+	bec[1].promedio=9.7; 
+	strcpy(bec[1].procedencia,"FI"); 
+	bec[1].generacion=11; 
+	bec[1].proyecto=1;
 	
-	strcpy(bec.nombre,"Angel"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=35; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.3; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"SB"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[2].nombre,"Angel"); 
+	bec[2].edad=35; 
+	bec[2].promedio=9.3; 
+	strcpy(bec[2].procedencia,"SB"); 
+	bec[2].generacion=11; 
+	bec[2].proyecto=1;
 	
-	strcpy(bec.nombre,"Omar"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=22; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.4; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"Fes Cuautitlan"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[3].nombre,"Omar"); 
+	bec[3].edad=22; 
+	bec[3].promedio=9.4; 
+	strcpy(bec[3].procedencia,"Fes Cuautitlan"); 
+	bec[3].generacion=11; 
+	bec[3].proyecto=1;
 	
-	strcpy(bec.nombre,"Anota"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=22; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.7; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"Poli"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[4].nombre,"Anota"); 
+	bec[4].edad=22; 
+	bec[4].promedio=9.7; 
+	strcpy(bec[4].procedencia,"Poli"); 
+	bec[4].generacion=11; 
+	bec[4].proyecto=1;
 	
-	strcpy(bec.nombre,"Erik"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=22; 
-	printf("%d\n",bec.edad);
-	bec.promedio=9.7; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"Poli"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=1;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[5].nombre,"Erik"); 
+	bec[5].edad=22; 
+	bec[5].promedio=9.7; 
+	strcpy(bec[5].procedencia,"Poli"); 
+	bec[5].generacion=11; 
+	bec[5].proyecto=1;
+
+	strcpy(bec[6].nombre,"Munra");
+	bec[6].edad=100; 
+	bec[6].promedio=8.1; 
+	strcpy(bec[6].procedencia,"El mas alla"); 
+	bec[6].generacion=11; 
+	bec[6].proyecto=2;
 	
-	strcpy(bec.nombre,"Munra"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=100; 
-	printf("%d\n",bec.edad);
-	bec.promedio=8.1; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"El mas alla"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=2;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	strcpy(bec[7].nombre,"Tutankamon"); 
+	bec[7].edad=89; 
+	bec[7].promedio=8.0; 
+	strcpy(bec[7].procedencia,"Egipto"); 
+	bec[7].generacion=11; 
+	bec[7].proyecto=2;
 	
-	strcpy(bec.nombre,"Tutankamon"); 
-	printf("%s\n",bec.nombre);
-	bec.edad=89; 
-	printf("%d\n",bec.edad);
-	bec.promedio=8.0; 
-	printf("%f\n",bec.promedio);
-	strcpy(bec.procedencia,"Egipto"); 
-	printf("%s\n",bec.procedencia);
-	bec.generacion=11; 
-	printf("%d\n",bec.generacion);
-	bec.proyecto=2;
-	printf((bec.proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
-	printf("-------------------\n");
+	for (int a=0;a<8;a++) //mientras la variable sea menor a 8, va a imprimir los valores de acuerdo indice del arreglo
+	{
+		printf("%s\n",bec[a].nombre);
+		printf("%d\n",bec[a].edad);
+		printf("%f\n",bec[a].promedio);
+		printf("%s\n",bec[a].procedencia);
+		printf("%d\n",bec[a].generacion);
+		printf((bec[a].proyecto&1)?"CON PROYECTO\n":"SIN PROYECTO\n");
+		printf("-------------------\n");
+	}	
+	
+	
+	
+	
 }	
 
 	
